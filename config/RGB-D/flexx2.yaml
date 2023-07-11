@@ -1,16 +1,4 @@
-YAML:1.0
-
-#--------------------------------------------------------------------------------------------
-# System config
-#--------------------------------------------------------------------------------------------
-
-# When the variables are commented, the system doesn't load a previous session or not store the current one
-
-# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
-#System.LoadAtlasFromFile: "Session_MH01_MH02_MH03_Mono"
-
-# The store file is created from the current session, if a file with the same name exists it is deleted
-#System.SaveAtlasToFile: "Session_MH01_MH02_MH03_Mono"
+%YAML:1.0
 
 #--------------------------------------------------------------------------------------------
 # Camera Parameters. Adjust them!
@@ -29,18 +17,25 @@ Camera1.k1: 0.35043060779571533
 Camera1.k2: -1.196163535118103
 Camera1.p1: 0.00010041334462584928
 Camera1.p2: 0.00016567850252613425
+Camera1.p3: 0.7725651264190674
 
 Camera.width: 224
 Camera.height: 172
 
-Camera.newWidth: 224
-Camera.newHeight: 172
+
 
 # Camera frames per second 
 Camera.fps: 30
 
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
 Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+Stereo.ThDepth: 40.0
+Stereo.b: 0.07732
+
+# Depth map values factor
+RGBD.DepthMapFactor: 1.0 # 1.0 for ROS_bag
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
@@ -64,7 +59,7 @@ ORBextractor.minThFAST: 7
 
 #--------------------------------------------------------------------------------------------
 # Viewer Parameters
-#---------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
 Viewer.KeyFrameSize: 0.05
 Viewer.KeyFrameLineWidth: 1.0
 Viewer.GraphLineWidth: 0.9
