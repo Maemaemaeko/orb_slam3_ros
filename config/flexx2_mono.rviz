@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /raw left img1
       Splitter Ratio: 0.5058823823928833
     Tree Height: 391
   - Class: rviz/Selection
@@ -52,10 +53,16 @@ Visualization Manager:
       Value: true
     - Class: rviz/TF
       Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
         camera:
+          Value: true
+        royale_camera_link:
+          Value: true
+        royale_camera_optical_frame:
           Value: true
         world:
           Value: true
@@ -66,6 +73,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
+        royale_camera_link:
+          royale_camera_optical_frame:
+            {}
         world:
           camera:
             {}
@@ -73,7 +83,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /cam0/image_raw
+      Image Topic: /royale_camera_driver/gray_image
       Max Value: 1
       Median window: 5
       Min Value: 0
