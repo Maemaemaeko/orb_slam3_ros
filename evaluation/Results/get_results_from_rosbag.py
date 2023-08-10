@@ -2,7 +2,7 @@ import rosbag
 import pandas as pd
 
 # Step 1: Specify the ROS bag file path
-rosbag_file = "/home/myamaguchi/catkin_ws/demo_data/vicon_system/rgbd_2023-07-28-12-37-18_2023-07-29-20-55-06.bag"
+rosbag_file = "/home/myamaguchi/catkin_ws/demo_data/vicon_system/mono_2023-07-28-12-23-21_2023-08-02-12-21-59.bag"
 # Step 2: Extract data from the ROS bag
 timestamps = []
 positions_x = []
@@ -38,4 +38,4 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df.to_csv("/home/myamaguchi/catkin_ws/src/orb_slam3_ros/evaluation/Results/vicon_system/rgbd_2023-07-28-12-37-18_2023-07-29-20-55-06.txt", index=False, float_format="%.10f")
+df.to_csv("/home/myamaguchi/catkin_ws/src/orb_slam3_ros/evaluation/Results/vicon_system/mono_2023-07-28-12-23-21_2023-08-02-12-21-59s.txt", index=False, float_format="%.10f")
